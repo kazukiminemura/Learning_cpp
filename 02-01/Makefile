@@ -1,8 +1,11 @@
-CC = g++
+CXX = g++
+CXXFLAGS = -Wall -Wextra -O2
+
 Target = variables
 
 SRC = $(Target).cpp
-OBJ = $(SRC:.c=.o)
+# convert .cpp -> .o
+OBJ = $(SRC:.cpp=.o)
 
 #
 # Built-in functions
@@ -12,11 +15,11 @@ OBJ = $(SRC:.c=.o)
 # $^ — The names of all prerequisites, separated by spaces.
 
 $(Target): $(OBJ)
-	$(CC) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Object Files
 %.o: %.cpp
-	$(CC) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm $(Target)
+	rm -f $(OBJ) $(Target)
