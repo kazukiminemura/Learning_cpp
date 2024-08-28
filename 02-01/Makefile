@@ -17,7 +17,7 @@ OBJ = $(SRC:.cpp=.o)
 $(Target): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Object Files
+# Rule to Build Object Files
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
