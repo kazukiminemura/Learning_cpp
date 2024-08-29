@@ -12,3 +12,4 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 02-04 void
 02-05 global and local variables
 02-06 cin
+02-07 if
