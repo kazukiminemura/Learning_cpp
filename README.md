@@ -17,4 +17,7 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 02-09 for    
 02-10 array    
 02-11 for and array    
-02-10 for, array and if    
+02-12 for, array and if    
+02-13 while    
+02-14 break and cotinue    
+02-15 switch    
