@@ -1,10 +1,10 @@
-CXX = g++
+CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
 Target = variables
 
 SRC = $(Target).cpp
-# convert .cpp -> .o
+# convert .cpp -> .o (pattern substitution)
 OBJ = $(SRC:.cpp=.o)
 
 #

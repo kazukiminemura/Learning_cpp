@@ -1,4 +1,4 @@
-CXX = g++
+CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
 Target = variables
