@@ -21,3 +21,6 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 02-13 while    
 02-14 break and cotinue    
 02-15 switch    
+03-01 bit byte      
+03-02 reference     
+03-03 character code    
