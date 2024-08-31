@@ -26,3 +26,5 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 03-03 character code    
 03-04 string    
 03-05 string operation    
+03-06 prototype    
+03-07 include    
