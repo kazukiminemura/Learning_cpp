@@ -1,7 +1,7 @@
 CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
-Target = include
+Target = random
 INCLUDE = -I./ # to specify user-defined header files's path
 
 SRC = $(Target).cpp

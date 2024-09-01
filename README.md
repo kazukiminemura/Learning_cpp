@@ -28,3 +28,4 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 03-05 string operation    
 03-06 prototype    
 03-07 include    
+03-08 random    
