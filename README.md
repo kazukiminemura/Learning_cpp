@@ -31,3 +31,5 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 03-08 random    
 03-09 math    
 03-10 overload    
+03-11 bool    
+03-11 bool_complex    
