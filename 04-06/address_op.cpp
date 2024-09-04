@@ -18,5 +18,7 @@ int main(){
   cout << "p    : " << (size_t)p << endl
       << "&n[2]   : " << (size_t)&n[2] << endl;
 
+
+  cout << &n[2] - &n[0] << endl;
   return 0;
 }
