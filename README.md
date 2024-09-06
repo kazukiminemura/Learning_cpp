@@ -35,4 +35,6 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 03-12 bool_complex    
 04-01 memory_address    
 04-02 pointer    
-04-02 pointer2    
+04-03 pointer2    
+04-04 pointer and array    
+04-05 pointer and array2    
