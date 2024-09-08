@@ -16,6 +16,9 @@ void Show(const Student* student){
       << " Japanese : " << student->scoreJapanese
       << ", Math : " << student->scoreMath
       << ", English : " << student->scoreEnglish << endl;
+
+  // cout << (*student).name << endl;
+  // cout << *(student.name) << endl;
 }
 
 int main(){
@@ -25,6 +28,15 @@ int main(){
     {"Kaoru Yoshida", 76, 78, 69, },
     };
   int size = sizeof student / sizeof *student;
+
+  cout << student[0].name << endl;
+  cout << student << endl;
+  cout << &student << endl;
+  cout << &student[0] << endl;
+  cout << &(student[0].name) << endl;
+  cout << &student[0].scoreJapanese << endl;
+  cout << &(student[0].scoreJapanese) << endl;
+  
 
   for(int i=0; i < size; ++i){
     Show(&student[i]);
