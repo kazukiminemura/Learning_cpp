@@ -14,7 +14,7 @@ int main(){
     cout << a << " : " << (size_t) &a << endl;
   }
 
-  cout << a << " : " << (size_t) &a << endl;
+  cout << ::a << " : " << (size_t) &::a << endl;
   return 0;
 }
 
