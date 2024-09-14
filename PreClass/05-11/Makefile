@@ -1,10 +1,13 @@
 CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
-SRC = $(wildcard ./*.cpp)
-Target = $(notdir $(SRC))
-# convert .cpp -> .o (pattern substitution)
-OBJ = $(notdir $(SRC:.cpp=.o))
+Target = linkage
+SRC = linkage.cpp linkage2.cpp
+OBJ = $(SRC:.cpp=.o)
+
+Target2 = internal
+SRC2 = internal.cpp internal2.cpp
+OBJ2 = $(SRC2:.cpp=.o)
 
 #
 # Built-in functions
@@ -13,16 +16,13 @@ OBJ = $(notdir $(SRC:.cpp=.o))
 # $< — The name of the first prerequisite.
 # $^ — The names of all prerequisites, separated by spaces.
 
+all: $(Target) $(Target2)
 
-all: $(Target)
-	echo $(Target) 
-	echo $(OBJ)
+$(Target): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# $(Target): $(OBJ)
-# 	echo $(Target) 
-# 	# echo $(OBJ) 
-# 	# $(CXX) $(CXXFLAGS) -o $@ $^
+$(Target2): $(OBJ2)
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Rule to Build Object Files
 %.o: %.cpp
@@ -30,3 +30,4 @@ all: $(Target)
 
 clean:
 	-rm -f $(OBJ) $(Target)
+	-rm -f $(OBJ2) $(Target2)
