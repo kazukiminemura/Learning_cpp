@@ -2,6 +2,7 @@
 
 c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 
+
 01-01 Hello World  
 01-02 Character & String  
 01-03 simple calculation  
@@ -38,3 +39,25 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 04-03 pointer2    
 04-04 pointer and array    
 04-05 pointer and array2    
+04-06 address_op    
+04-07 array_pointer    
+04-08 const    
+04-09 const2    
+04-10 null pointer    
+05-01 multiple_array1    
+05-02 multiple_array2    
+05-03 structure1    
+05-04 structure2    
+05-04 structure3    
+05-06 enum    
+05-07 conditional_op    
+05-08 defaul    
+05-09 local_var    
+05-10 scope    
+05-11 linkage    
+05-12 refference    
+05-13 literal    
+05-14 escape    
+05-15 new_delete1    
+05-16 new_delete1    
+05-17 new_delete1    
