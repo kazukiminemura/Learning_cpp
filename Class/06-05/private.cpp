@@ -3,15 +3,21 @@
 using namespace std;
 
 const int INTARRAY_SIZE = 100;
+const int PADDING_SIZE = 5;
 
 class IntArray {
   public:
-    int m_array[INTARRAY_SIZE];
-
     IntArray();
+
+  public:
     int Get(int i);
     void Set(int i, int value);
+
+  private:
     void CheckIndex(int i);
+
+  private:
+    int m_array[INTARRAY_SIZE + PADDING_SIZE];
 };
 
 // Access member values
@@ -27,7 +33,7 @@ void IntArray::Set(int i, int value){
 
 // check index
 void IntArray::CheckIndex(int i){
-  if(0 <= i && i < INTARRAY_SIZE){
+  if(0 <= i - PADDING_SIZE && i < INTARRAY_SIZE + PADDING_SIZE){
     // index is valid
   } else {
     cout << "the index is out of bound" << endl
@@ -45,7 +51,8 @@ IntArray::IntArray(){
 int main(){
   IntArray a;
   cout << a.Get(10) << endl;
-  cout << a.Get(101) << endl;
+  cout << a.Get(80) << endl;
+  cout << a.Get(4) << endl;
 
   return 0;
 }
