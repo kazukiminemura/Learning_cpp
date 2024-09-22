@@ -1,16 +1,18 @@
 #ifndef ARRAYSTREAM_H_
 #define ARRAYSTREAM_H_
 
-class ArrayStream {
+#include "Stream.hpp"
+
+class ArrayStream:
+    public Stream
+{
 public:
     ArrayStream(const double* array);
-    double Get() const;
     bool Set();
 
 private:
     const double* m_array;
     int m_i;
-    double m_n;
 };
 
 #endif // #ifndef ARRAYSTREAM_H_

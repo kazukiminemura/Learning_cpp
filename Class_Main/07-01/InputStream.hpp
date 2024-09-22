@@ -1,12 +1,14 @@
 #ifndef INPUTSTREAM_H_
 #define INPUTSTREAM_H_
 
-class InputStream {
-  public:
-    double Get() const;
-    bool Set();
+#include "Stream.hpp"
 
-  private:
-    double m_n;
+class InputStream :
+  public Stream 
+{
+public:
+  bool Set();
 };
+
+
 #endif // INPUTSTREAM_H_

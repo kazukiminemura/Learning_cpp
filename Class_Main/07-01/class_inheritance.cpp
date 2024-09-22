@@ -1,6 +1,24 @@
+#include "InputStream.hpp"
 #include "ArrayStream.hpp"
 #include <iostream>
 using namespace std;
+
+
+bool Average(InputStream& stream){
+  int count;
+  double avr = 0;
+
+  for(count = 0; stream.Set(); ++count){
+    avr += stream.Get();
+  }
+  if(count == 0){
+    return false;
+  }
+
+  avr /= count;
+  cout << "the average is " << avr << endl;
+  return true;
+}
 
 bool Average(ArrayStream& stream){
   int count;
@@ -19,6 +37,17 @@ bool Average(ArrayStream& stream){
 }
 
 int main(){
+  // InputStream
+  std::cout << "InputStream class test" << std::endl;
+  while(true){
+    InputStream stream;
+    if(!Average(stream)){
+      break;
+    }
+  }
+
+  // ArrayStream
+  std::cout << "ArrayStream class test" << std::endl;
   static const double ARRAY1[] = {1, 2, 3, -1};
   static const double ARRAY2[] = {0.5, 1.5, -1};
   static const double ARRAY3[] = {-1};
