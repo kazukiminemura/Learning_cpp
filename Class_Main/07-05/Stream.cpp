@@ -3,7 +3,7 @@
 using namespace std;
 
 double Stream::Get() const {
-    return m_n >= 0;
+    return m_n;
 }
 
 bool Stream::Set(){
