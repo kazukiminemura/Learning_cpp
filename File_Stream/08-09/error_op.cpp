@@ -43,15 +43,30 @@ int main(){
     return EXIT_FAILURE;
   }
 
+  bool error = false;
   do {
     char buf[BUF_SIZE];
 
     src.read(buf, sizeof buf);
+    if(src.fail() && ! src.eof()){
+      error = true;
+      break;
+    }
     dst.write(buf, src.gcount());
+    if(dst.fail()){{
+      error = true;
+      break;
+    }}
   } while(! src.eof());
 
   dst.close();
   src.close();
+
+  if(error){
+    cout << "got error in file operation" << endl;
+    remove(DST_NAME);
+    return EXIT_FAILURE;
+  }
   return 0;
 }
 
