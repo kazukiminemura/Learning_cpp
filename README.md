@@ -90,17 +90,17 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 07-11 dynamic class    
 07-12 virtual destructor   
 ## File_Stream
-08-01 String class 1
-08-02 String class 2
-08-03 String stream
-08-04 File operation
-08-05 File operation 2
-08-06 Binary
-08-07 Binary mode
-08-08 Binary read and write
-08-09 Error operation
-08-10 File pointer
-08-11 iostream
-08-12 namespace 1
-08-13 namespace 2
-08-14 namespace 3
+08-01 String class 1  
+08-02 String class 2  
+08-03 String stream  
+08-04 File operation  
+08-05 File operation 2  
+08-06 Binary  
+08-07 Binary mode  
+08-08 Binary read and write  
+08-09 Error operation  
+08-10 File pointer  
+08-11 iostream  
+08-12 namespace 1  
+08-13 namespace 2  
+08-14 namespace 3   
