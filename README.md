@@ -104,3 +104,13 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 08-12 namespace 1  
 08-13 namespace 2  
 08-14 namespace 3   
+## Template
+09-01 Template basic  
+09-02 Template basic2  
+09-03 Template structure  
+09-04 Template call  
+09-05 Template class  
+09-06 Class Template  
+09-07 Class Template2  
+09-08 Default template  
+09-09 Vector  
