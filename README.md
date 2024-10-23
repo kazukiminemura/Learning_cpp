@@ -114,3 +114,12 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 09-07 Class Template2  
 09-08 Default template  
 09-09 Vector  
+## Error and Exception
+10-01 Goto  
+10-02 Exception  
+10-03 Exception2  
+10-04 Exception3  
+10-05 Exception4  
+10-06 Exception class  
+10-07 Standard exception  
+10-08 Constructor exception    
