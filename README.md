@@ -123,3 +123,13 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 10-06 Exception class  
 10-07 Standard exception  
 10-08 Constructor exception    
+## Advanced
+11-01 Static member 1  
+11-02 Static member 2  
+11-03 Static member 3  
+11-04 Static member 4  
+11-05 Const member  
+11-06 Temporary object  
+11-07 Temporary objcet 2  
+11-08 Operation overload    
+11-09 Assign   
