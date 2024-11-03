@@ -21,9 +21,9 @@ double Fraction::Get() const {
 }
 
 // cast overload
-// double Fraction::operator double() const {
-//     return m_numer / m_denom;
-// }
+Fraction::operator double() const {
+    return m_numer / m_denom;
+}
 
 // mutiplication overload (*)
 Fraction Fraction::operator* (const Fraction& rop) const {

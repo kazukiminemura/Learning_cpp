@@ -11,7 +11,7 @@ public:
   double GetDenom() const; // get denominator
   double Get() const;
 
-//   Fraction::operator T();
+  operator double() const;
   Fraction Fraction::operator* (const Fraction& rop) const;
   Fraction Fraction::operator- () const;
   Fraction& Fraction::operator*=(const Fraction& rop);
