@@ -133,3 +133,7 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 11-07 Temporary objcet 2  
 11-08 Operation overload    
 11-09 Assign   
+11-10 overload and this   
+11-11 overload and this2   
+11-12 Explicit   
+11-09 cpp cast   
