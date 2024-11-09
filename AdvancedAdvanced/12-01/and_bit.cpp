@@ -3,8 +3,8 @@
 using namespace std;
 
 int main(){
-  int a = 01111010;
-  int b = 00001111;
+  int a = 0b01111010;
+  int b = 0b00001111;
   int c;
 
   c = a & b;
