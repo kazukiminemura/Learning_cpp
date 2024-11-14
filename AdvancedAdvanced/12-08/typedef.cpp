@@ -3,6 +3,8 @@
 #include <string>
 using namespace std;
 
+typedef int ValueType;
+
 class Calculator {
 public:
   void Run();
@@ -13,9 +15,9 @@ private:
   void ShowResult() const;  // show results
 
 private:
-  int m_a, m_b;             // two values
+  ValueType m_a, m_b;             // two values
   char m_op;                // operation
-  int m_result;             // operation result
+  ValueType m_result;             // operation result
 };
 
 void Calculator::Run() {
