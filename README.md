@@ -138,3 +138,17 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 11-12 Explicit   
 11-13 cpp cast   
 ## AdvancedAdvanced
+12-01 And Bit  
+12-02 OR XOR  
+12-03 Not bitshift  
+12-04 Bit flag  
+12-05 Bit flag2  
+12-06 Inline  
+12-07 Inline member  
+12-08 Typedef    
+12-09 Typedef2   
+12-10 Macro   
+12-11 Macro Utilization   
+12-12 Bug from macro   
+12-13 Assert
+12-14 Debug Release 
