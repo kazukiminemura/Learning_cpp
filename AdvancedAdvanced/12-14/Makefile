@@ -1,18 +1,24 @@
 CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
-debug_release: debug_release.o
-	$(CXX) $(CXXFLAGS) -o $@ debug_release.o
-
-debug_release-dgb: debug_release-dgb.o
-	$(CXX) $(CXXFLAGS) -o $@ debug_release-dgb.o
 
 # Rule to Build Object Files
-debug_release.o: debug_release.cpp
-	$(CXX) $(CXXFLAGS) -DNDEBUG -c debug_release.cpp -o $@ 
+Release/%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -DNDEBUG -c $< -o $@ 
 
-debug_release-dgb.o: debug_release.cpp
-	$(CXX) $(CXXFLAGS) -c debug_release.cpp -o $@ 
+Debug/%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ 
+
+debug_release: Release Release/debug_release.o
+	$(CXX) $(CXXFLAGS) -o $@ Release/debug_release.o
+
+debug_release-dgb: Debug Debug/debug_release.o
+	$(CXX) $(CXXFLAGS) -o $@ Debug/debug_release.o
+
+Debug:
+	mkdir Debug
+Release:
+	mkdir Release
 
 clean:
-	-rm -f debug_release-dgb.o debug_release.o debug_release debug_release-dgb
+	-rm -rf Debug Release debug_release debug_release-dgb
