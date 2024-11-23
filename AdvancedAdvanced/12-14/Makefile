@@ -1,6 +1,22 @@
 CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
+PROGRAM = debug_release
+SRCS = $(wildcard *.cpp)
+# $(patsubst "before pattern", "after pattern", "before texts)
+# characters at % will be included in after subsitition
+DOBJS = $(patsubst %.cpp, Debug/%.o, $(SRCS))
+ROBJS = $(patsubst %.cpp, Release/%.o, $(SRCS))
+
+# PHOHY -- declear new commands
+.PHOHY: default debug relese clean
+
+#
+# Built-in functions
+#
+# $@ — The file name of the target.
+# $< — The name of the first prerequisite.
+# $^ — The names of all prerequisites, separated by spaces.
 
 # Rule to Build Object Files
 Release/%.o: %.cpp
@@ -9,11 +25,16 @@ Release/%.o: %.cpp
 Debug/%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
-debug_release: Release Release/debug_release.o
-	$(CXX) $(CXXFLAGS) -o $@ Release/debug_release.o
+# new rules: default, debug, release
+default: debug
+debug: $(PROGRAM)-dbg
+release: $(PROGRAM)
 
-debug_release-dgb: Debug Debug/debug_release.o
-	$(CXX) $(CXXFLAGS) -o $@ Debug/debug_release.o
+debug_release: Release $(ROBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $(ROBJS)
+
+debug_release-dbg: Debug $(DOBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $(DOBJS)
 
 Debug:
 	mkdir Debug
@@ -21,4 +42,4 @@ Release:
 	mkdir Release
 
 clean:
-	-rm -rf Debug Release debug_release debug_release-dgb
+	-rm -rf Debug Release $(PROGRAM) $(PROGRAM)-dbg
