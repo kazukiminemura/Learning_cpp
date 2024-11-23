@@ -20,11 +20,11 @@ class C:
   public BBase
 {
   public:
-    // overwride
+    // override
     virtual void AHoge() {
       cout << "C::AHoge" << endl;
     }
-    // overwride
+    // override
     virtual void BHoge() {
       cout << "C::BHoge" << endl;
     }
