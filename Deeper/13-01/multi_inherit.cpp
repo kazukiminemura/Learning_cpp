@@ -10,7 +10,7 @@ public:
 class BBase {
 public:
   virtual ~BBase() {}
-  virtual BBase() = 0;
+  virtual void BHoge() = 0;
 };
 
 class C:
