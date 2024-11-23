@@ -4,7 +4,9 @@ using namespace std;
 class ABase {
 public:
   virtual ~ABase() {}
-  virtual void AHoge() = 0;
+  // virtual modifier is required for override feature.
+  // = 0 is for pure virtual function that does not require implementation
+  virtual void AHoge() = 0; 
 };
 
 class BBase {
@@ -18,10 +20,11 @@ class C:
   public BBase
 {
   public:
+    // overwride
     virtual void AHoge() {
       cout << "C::AHoge" << endl;
     }
-
+    // overwride
     virtual void BHoge() {
       cout << "C::BHoge" << endl;
     }
