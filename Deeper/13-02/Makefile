@@ -1,7 +1,7 @@
 CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
-PROGRAM = multi_inherit
+PROGRAM = multi_inherit2
 SRCS = $(wildcard *.cpp)
 # $(patsubst "before pattern", "after pattern", "before texts)
 # characters at % will be included in after subsitition
