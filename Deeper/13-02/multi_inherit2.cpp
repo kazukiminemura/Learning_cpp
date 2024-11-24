@@ -39,13 +39,15 @@ class C:
 
 int main(){
   C c;
-  A1& a1 = static_cast<A1&>(c);
+  A1& a1 = static_cast<A1&>(c); // class C --> class A1 --> class ABase
   A2& a2 = static_cast<A2&>(c);
 
+  // calling upcasted virtual function 
   a1.AHoge();
   a2.AHoge();
 
-  c.A1::AHoge();
+  // calling scope resolution operator
+  c.A1::AHoge(); 
   c.A2::AHoge();
 }
 
