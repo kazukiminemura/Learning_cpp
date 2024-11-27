@@ -38,7 +38,7 @@ public:
 int main(){
   A1 a1; a1.Show();
   A2 a2; a2.Show();
-  C c; c.Show();
+  C c; c.Show(); // A1 and A2 in C are not calling ABase, due to virtual inherit.
   // A1::Show() will how 3 since C constructor initiated m_x to 3
   c.A1::Show();
 }
