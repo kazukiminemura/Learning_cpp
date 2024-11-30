@@ -150,5 +150,5 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 12-10 Macro   
 12-11 Macro Utilization   
 12-12 Bug from macro   
-12-13 Assert
+12-13 Assert  
 12-14 Debug Release 
