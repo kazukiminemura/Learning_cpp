@@ -1,7 +1,7 @@
 CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
-PROGRAM = member_function_pointer3
+PROGRAM = short_circuit
 SRCS = $(wildcard *.cpp)
 # $(patsubst "before pattern", "after pattern", "before texts)
 # characters at % will be included in after subsitition
