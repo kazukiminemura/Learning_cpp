@@ -166,7 +166,7 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 13-11 Using   
 13-12 Template incomplete   
 13-13 Template special  
-13-14 Function pointer
+13-14 Function pointer  
 13-15 Member function pointer1  
 13-16 Member function pointer2   
 13-17 Data member pointer   
