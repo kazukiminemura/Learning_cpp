@@ -137,7 +137,7 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 11-11 overload and this2   
 11-12 Explicit   
 11-13 cpp cast   
-## AdvancedAdvanced
+## More Advanced
 12-01 And Bit  
 12-02 OR XOR  
 12-03 Not bitshift  
