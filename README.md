@@ -151,4 +151,22 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 12-11 Macro Utilization   
 12-12 Bug from macro   
 12-13 Assert  
-12-14 Debug Release 
+12-14 Debug Release  
+## Deeper
+13-01 Multi inherit1  
+13-02 Multi inherit2  
+13-03 Virtual inherit1  
+13-04 Virtual inherit2  
+13-05 Virtual inherit3  
+13-06 Interface class  
+13-07 Typeid  
+13-08 Downcast and corrosscast    
+13-09 Friend   
+13-10 Incomplete type   
+13-11 Using   
+13-12 Template incomplete   
+13-13 Template special  
+13-14 Function pointer
+13-15 Member function pointer1 
+13-16 Member function pointer2 
+13-17 Data member pointer 
