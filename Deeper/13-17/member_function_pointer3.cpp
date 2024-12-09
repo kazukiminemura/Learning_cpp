@@ -42,7 +42,7 @@ int main(){
 
   Point pt_obj = { 0 , 0 };
   Point* ppt = &pt_obj;
-  int Point::*mp = &Point::x;
+  int Point::*mp = &Point::x; // declear data member pointer.
   cout << (pt_obj.*mp) << endl; // calling obj case
   cout << (ppt->*mp) << endl; // calling pointer case
 }
