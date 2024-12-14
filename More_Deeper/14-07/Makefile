@@ -19,14 +19,7 @@ ROBJS = $(patsubst %.cpp, Release/%.o, $(SRCS))
 # $^ — The names of all prerequisites, separated by spaces.
 Release/%.o: system.cpp
 	$(CXX) $(CXXFLAGS) -DNDEBUG -c $< -o $@ 
-
-Release/%.o: main_return_value.cpp
-	$(CXX) $(CXXFLAGS) -DNDEBUG -c $< -o $@ 
-
 Debug/%.o: system.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@ 
-
-Debug/%.o: main_return_value.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
 # new rules: default, debug, release
@@ -38,7 +31,6 @@ $(PROGRAM): Release Release/system.o
 	$(CXX) $(CXXFLAGS) -o $@ Release/system.o
 $(PROGRAM)-dbg: Debug Debug/system.o
 	$(CXX) $(CXXFLAGS) -o $@ Debug/system.o
-
 main_return_value: main_return_value.o
 	$(CXX) $(CXXFLAGS) -o $@ main_return_value.o
 
@@ -48,4 +40,4 @@ Release:
 	mkdir Release
 
 clean:
-	-rm -rf Debug Release $(PROGRAM) $(PROGRAM)-dbg main_return_value
+	-rm -rf Debug Release $(PROGRAM) $(PROGRAM)-dbg main_return_value main_return_value.o
