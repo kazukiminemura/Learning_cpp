@@ -2,7 +2,7 @@ CXX = icpx
 CXXFLAGS = -Wall -Wextra -O2
 
 PROGRAM = system
-SRCS = system.cpp
+SRCS = $(wildcard *.cpp)
 # $(patsubst "before pattern", "after pattern", "before texts)
 # characters at % will be included in after subsitition
 DOBJS = $(patsubst %.cpp, Debug/%.o, $(SRCS))
@@ -33,16 +33,14 @@ Debug/%.o: main_return_value.cpp
 default: debug
 debug: $(PROGRAM)-dbg main_return_value
 release: $(PROGRAM) main_return_value
-main_return_value: main_return_value
 
-$(PROGRAM): Release $(ROBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $(ROBJS)
-main_return_value: Release Release/main_return_value.o
-	$(CXX) $(CXXFLAGS) -o $@ Release/main_return_value.o
-$(PROGRAM)-dbg: Debug $(DOBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $(DOBJS)
-main_return_value: Debug Debug/main_return_value.o
-	$(CXX) $(CXXFLAGS) -o $@ Debug/main_return_value.o
+$(PROGRAM): Release Release/system.o
+	$(CXX) $(CXXFLAGS) -o $@ Release/system.o
+$(PROGRAM)-dbg: Debug Debug/system.o
+	$(CXX) $(CXXFLAGS) -o $@ Debug/system.o
+
+main_return_value: main_return_value.o
+	$(CXX) $(CXXFLAGS) -o $@ main_return_value.o
 
 Debug:
 	mkdir Debug
