@@ -1,4 +1,4 @@
-CXX = g++
+CXX = icpx
 CXXFLAGS = -Wall -Wextra -O0
 
 DFLAGS = $(CXXFLAGS)
@@ -32,9 +32,9 @@ default: debug
 debug: $(PROGRAM)-dbg
 release: $(PROGRAM)
 
-$(PROGRAM): Release Release/gen_pch.h.gch $(ROBJS)
+$(PROGRAM): Release Release/pch_base.h.gch $(ROBJS)
 	$(CXX) $(RFLAGS) -o $@ $(ROBJS)
-$(PROGRAM)-dbg: Debug Debug/gen_pch.h $(DOBJS)
+$(PROGRAM)-dbg: Debug Debug/pch_base.h.gch $(DOBJS)
 	$(CXX) $(DFLAGS) -o $@ $(DOBJS)
 
 Debug:
@@ -42,10 +42,10 @@ Debug:
 Release:
 	mkdir Release
 
-# Release/Pch.h.gch: pch_base.h
-# 	$(CXX) -o $@ $(RFLAGS) -fpch-preprocess $<
-Debug/gen_pch.h: pch_base.h
-	$(CXX) $(DFLAGS) -c $< -o $@ 
+Release/pch_base.h.gch: pch_base.h
+	$(CXX) $(RFLAGS) -o $@ -c $<
+Debug/pch_base.h.gch: pch_base.h
+	$(CXX) $(DFLAGS) -o $@ -c $<
 
 clean:
 	-rm -rf Debug Release $(PROGRAM) $(PROGRAM)-dbg
