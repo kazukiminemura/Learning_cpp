@@ -170,3 +170,15 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 13-15 Member function pointer1  
 13-16 Member function pointer2   
 13-17 Data member pointer   
+## More Deeper
+13-01 Short circit  
+13-02 Pointer to void  
+13-03 if directive1  
+13-04 if directive2  
+13-05 Predefine macro  
+13-06 Variable argument  
+13-07 Main return value  
+13-08 commandline argument    
+13-09 exit   
+13-10 argument   
+13-11 precompile   
