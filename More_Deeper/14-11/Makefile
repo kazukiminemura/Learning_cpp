@@ -32,22 +32,23 @@ default: debug
 debug: $(PROGRAM)-dbg
 release: $(PROGRAM)
 
-$(PROGRAM): Release Release/pch_base.h.gch $(ROBJS)
+$(PROGRAM): Release Release/pch.h.pchi $(ROBJS)
 	$(CXX) $(RFLAGS) -o $@ $(ROBJS)
-$(PROGRAM)-dbg: Debug Debug/pch_base.h.gch $(DOBJS)
+$(PROGRAM)-dbg: Debug Debug/pch.h.pchi $(DOBJS)
 	$(CXX) $(DFLAGS) -o $@ $(DOBJS)
+	
 
 Debug:
 	mkdir Debug
 Release:
 	mkdir Release
 
-Release/pch_base.h.gch: pch_base.h
-	$(CXX) $(RFLAGS) -o $@ -c $<
-Debug/pch_base.h.gch: pch_base.h
-	$(CXX) $(DFLAGS) -o $@ -c $<
+Release/pch.h.pchi: pch_base.h
+	$(CXX) $(RFLAGS) -fpch-preprocess -o $@ -c $<
+	cp pch_base.h Release/pch.h
+Debug/pch.h.pchi: pch_base.h
+	$(CXX) $(DFLAGS) -fpch-preprocess -o $@ -c $<
+	cp pch_base.h Debug/pch.h
 
 clean:
 	-rm -rf Debug Release $(PROGRAM) $(PROGRAM)-dbg
-
-*/precompile.o: pch_base.h

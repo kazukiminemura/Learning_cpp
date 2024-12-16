@@ -2,9 +2,9 @@
 #define PCH_H_
 
 #ifdef NDEBUG
-#include "Release/pch_base.h"
+#include "Release/pch.h"
 #else
-#include "Debug/pch_base.h"
+#include "Debug/pch.h"
 #endif
 
 #endif // #ifndef PCH_H_
