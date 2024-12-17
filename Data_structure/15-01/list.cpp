@@ -25,6 +25,8 @@ private:
   static int m_count;
 };
 
+int CountDown::m_count;
+
 // task for showing Hello
 bool Hello(){
   cout << "Hello" << endl;
