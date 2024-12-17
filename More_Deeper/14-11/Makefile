@@ -32,10 +32,10 @@ default: debug
 debug: $(PROGRAM)-dbg
 release: $(PROGRAM)
 
-$(PROGRAM): Release Release/pch.h.pchi $(ROBJS)
-	$(CXX) $(RFLAGS) -o $@ $(ROBJS)
-$(PROGRAM)-dbg: Debug Debug/pch.h.pchi $(DOBJS)
-	$(CXX) $(DFLAGS) -o $@ $(DOBJS)
+$(PROGRAM): Release Release/pch_base.h.pchi $(ROBJS)
+	$(CXX) $(RFLAGS) -include Release/pch_base.h -o $@ $(ROBJS)
+$(PROGRAM)-dbg: Debug Debug/pch_base.h.pchi $(DOBJS)
+	$(CXX) $(DFLAGS) -include Debug/pch_base.h -o $@ $(DOBJS)
 
 
 Debug:
@@ -43,13 +43,10 @@ Debug:
 Release:
 	mkdir Release
 
-Release/pch.h.pchi: pch_base.h
-	$(CXX) $(RFLAGS) -o $@ -c $<
-	cp pch_base.h Release/pch.h
-Debug/pch.h.pchi: pch_base.h
-	# $(CXX) $(DFLAGS) -o $@ -c $<
-	cp pch_base.h Debug/pch.h
+Release/pch_base.h.pchi: pch_base.h
+	$(CXX) $(RFLAGS) -x c++-header -o $@ -c $<
+Debug/pch_base.h.pchi: pch_base.h
+	$(CXX) $(DFLAGS) -x c++-header -o $@ -c $<
 	
-
 clean:
 	-rm -rf Debug Release $(PROGRAM) $(PROGRAM)-dbg
