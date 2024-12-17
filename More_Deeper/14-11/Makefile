@@ -36,7 +36,7 @@ $(PROGRAM): Release Release/pch.h.pchi $(ROBJS)
 	$(CXX) $(RFLAGS) -o $@ $(ROBJS)
 $(PROGRAM)-dbg: Debug Debug/pch.h.pchi $(DOBJS)
 	$(CXX) $(DFLAGS) -o $@ $(DOBJS)
-	
+
 
 Debug:
 	mkdir Debug
@@ -44,11 +44,12 @@ Release:
 	mkdir Release
 
 Release/pch.h.pchi: pch_base.h
-	$(CXX) $(RFLAGS) -fpch-preprocess -o $@ -c $<
+	$(CXX) $(RFLAGS) -o $@ -c $<
 	cp pch_base.h Release/pch.h
 Debug/pch.h.pchi: pch_base.h
-	$(CXX) $(DFLAGS) -fpch-preprocess -o $@ -c $<
+	# $(CXX) $(DFLAGS) -o $@ -c $<
 	cp pch_base.h Debug/pch.h
+	
 
 clean:
 	-rm -rf Debug Release $(PROGRAM) $(PROGRAM)-dbg
