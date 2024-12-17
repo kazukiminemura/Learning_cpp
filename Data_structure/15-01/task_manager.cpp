@@ -5,7 +5,7 @@ void TaskManager::Execute() {
   for(SizeType i = 0; i < m_task.size(); ){
     if(m_task[i]()){
         ++i;
-    }else{
+    }else{ // fail case
         Unregister(i);
     }
   }
@@ -18,7 +18,6 @@ void TaskManager::Register(FpTask task) {
 // Unregister task
 void TaskManager::Unregister(SizeType id) {
   SizeType size = m_task.size();
-
   for(SizeType i = id + 1; i < size; ++i){
     m_task[i-1]= m_task[i];
   }

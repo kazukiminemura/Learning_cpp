@@ -7,11 +7,12 @@ public:
   // Countdown task
   // count down until zero
   static bool Task() {
-    cout << m_count << endl;
+    cout << "Task: " <<  m_count << endl;
     if(m_count == 0) {
       return false;
     }
     --m_count;
+    cout << "Task becomes: " <<  m_count << endl;
     return true;
   }
 
@@ -36,8 +37,8 @@ bool Hello(){
 int main(){
   TaskManager manager;
 
-  CountDown::Register(manager, 3);
-  manager.Register(Hello);
+  CountDown::Register(manager, 3); // m_task.size() == 1
+  manager.Register(Hello);         // m_task.size() == 2
 
   for(int i=0; i < 5; ++i){
     manager.Execute();
