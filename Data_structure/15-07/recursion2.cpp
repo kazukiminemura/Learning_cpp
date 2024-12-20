@@ -8,7 +8,15 @@ void CountDown(int count){
   }
 }
 
+unsigned int Factorial(unsigned int n){
+  return n == 0 ? 1 : n * Factorial(n -1);
+}
+
 int main(){
   CountDown(3);
   CountDown(2);
+
+  for(int i = 0; i < 9; ++i){
+    cout << i << "! = " << Factorial(i) << endl;
+  }
 }
