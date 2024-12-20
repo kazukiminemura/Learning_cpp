@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Wextra
 DFLAGS = $(CXXFLAGS) -O0
 RFLAGS = $(CXXFLAGS) -O3 -DNDEBUG
 
-PROGRAM = doubly_link
+PROGRAM = doubly_list
 SRCS = $(wildcard *.cpp)
 
 # $(patsubst "before pattern", "after pattern", "before texts)
