@@ -11,7 +11,12 @@ bool Match(
   for(; !(*str == '\0' || *pat == '\0'); ++str, ++pat){
     if(*pat == '*'){
       // if wildcard "*"
-      for(++pat; *pat != *str; ++str){
+      // forward position in str until matching
+      for(++pat; ; ++str){
+        // if remaining string is matched, then return ture
+        if(Match(str, pat)){
+          return true;
+        }
         // if it does not match until end of string, then it fails
         if(*str == '\0'){
           return false;
@@ -30,19 +35,15 @@ bool Match(
 }
 
 bool Input(string& str){
-  cout << "> * " << flush;
+  cout << "> " << flush;
   getline(cin, str);
   return ! (cin.fail() || str == "");
 }
 
 int main(){
-  static const char PAT[] = "*.txt";
-
-  cout << PAT << " is matching pattern" << endl;
-
-  string str;
-  while(Input(str)){
-    cout << (Match(str.c_str(), PAT) ?
+  string str, pat;
+  while(Input(str) && Input(pat)){
+    cout << (Match(str.c_str(), pat.c_str()) ?
               "matched":
               "unmatched")
         << endl;
