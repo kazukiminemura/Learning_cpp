@@ -29,7 +29,7 @@ public:
 
   virtual ~Tree(){
     Clear();
-    delete m_root; // Clear does not delete root node, so manually delete it here
+    delete m_root; // Clear() does not delete root node, so manually delete it here
   }
 
   // get root node
@@ -57,7 +57,7 @@ private:
     }
     children.clear();
 
-    // does not delete root node
+    // this does not delete root node
     if(node != m_root) { delete node; }
   }
 
