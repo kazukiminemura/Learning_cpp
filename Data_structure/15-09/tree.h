@@ -55,7 +55,7 @@ private:
     for(Iterator it = children.begin(); it != children.end(); ++it){
       Clear(*it);
     }
-    children.clear();
+    children.clear(); // delete all elements
 
     // this does not delete root node
     if(node != m_root) { delete node; }
