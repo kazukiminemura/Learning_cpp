@@ -190,3 +190,7 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 15-05 Placement new  
 15-06 Recursion  
 15-07 Recursion2  
+15-08 recursion3    
+15-09 tree   
+15-10 set & map   
+15-11 hash  
