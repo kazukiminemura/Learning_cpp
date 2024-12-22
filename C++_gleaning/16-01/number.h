@@ -4,6 +4,7 @@
 #include <iostream>
 
 class Number {
+private:
   // holding data type
   enum Type { INT, DOUBLE };
 
@@ -18,8 +19,13 @@ public:
     std::ostream& ostr, const Number& n);
   
 private:
-  int m_int;
-  double m_double;
+  // different data type, but use same memory address
+  union Value {
+    int int_;
+    double double_;
+  };
+
+  Value m_value;
   Type m_type; // holding data type
 };
 
