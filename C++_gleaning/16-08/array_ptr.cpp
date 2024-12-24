@@ -7,8 +7,6 @@ int array[3][5] = {
   { 20, 21, 22, 23, 24, },
 };
 
-typedef int Int5[5];
-
 int main(){
   int (*p)[5] = array;
   cout << p[2][3] << endl;
