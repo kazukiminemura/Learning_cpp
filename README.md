@@ -196,3 +196,8 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 15-11 hash  
 ## C++ Gleaning
 16-01 Union  
+16-02 Unnamed  
+16-03 Bit field  
+16-04 Flex array memeber  
+16-05 Comma  
+16-06 Token concatnation  
