@@ -5,9 +5,9 @@ using namespace std;
 
 // structure for file information
 struct FileInfo {
-  size_t sizePath;
-  size_t sizeFile;
-  char path[1];
+  size_t sizePath; // size of path name
+  size_t sizeFile; // size of file
+  char path[1];    // path name
 
   // class for managing dynamic memory address
   class Holder {
