@@ -201,3 +201,8 @@ c++ compiler in use: g++ and Intel® oneAPI DPC++/C++ Compiler (icpx)
 16-04 Flex array memeber  
 16-05 Comma  
 16-06 Token concatnation  
+16-07 Stringizing  
+16-08 Array_ptr    
+16-09 Extern_C   
+16-10 Volatile   
+16-11 Terminate  
